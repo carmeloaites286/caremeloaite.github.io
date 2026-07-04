@@ -68,39 +68,43 @@
             background: #fff;
             padding: 12px 0;
             border-bottom: 1px solid var(--divider);
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
 
         .boq-header .header-inner {
             max-width: 1170px;
             margin: 0 auto;
-            padding: 0 15px;
+            padding: 0 16px;
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
 
         .boq-header .header-logo img {
-            height: 40px;
+            height: 32px;
             width: auto;
             display: block;
         }
 
         .boq-header .header-contact {
-            font-size: 14px;
+            font-size: 13px;
             color: var(--text-secondary);
         }
 
         .boq-header .header-contact a {
             color: var(--boq-blue);
             font-weight: 600;
+            white-space: nowrap;
         }
 
-        @media (max-width: 675px) {
-            .boq-header .header-contact {
-                font-size: 12px;
-            }
+        @media (max-width: 480px) {
             .boq-header .header-logo img {
-                height: 30px;
+                height: 26px;
+            }
+            .boq-header .header-contact {
+                font-size: 11px;
             }
         }
 
@@ -874,13 +878,15 @@
 
     <!-- ── BOQ HEADER ── -->
     <header class="boq-header" role="banner">
-        <div class="header-inner">
-            <a class="header-logo" href="#" title="Bank of Queensland">
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAbCAYAAAAx5Yr5AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAL5SURBVHgB7ZtLbttAEIbHZQPtIW++QJIpCJcLZOUdE3eXBUiycVZeZJ0NjMAGslG2Zc9Uw4dYFj40PZSUmlL11VekCJJ9B0D/wA6+IRAAf/3BR8ULfPYTgDOW/F8BcLkAoGm/m4H+7/gpgHO2/A2A8zbS/wBS0wC47ADQMMD1FwCXc6fBZcvua0VnGcBsGMBqIUkBEMctME2T05blbQeiKIKmacBxnD2RuF+/4yA5fUVRhCAI4P379zU7Ho9B0zTTALIsAz0Dw7D3IhgMBrVEOnTbBWiaBqPR6MCeHQ6Hnr3RaJRLJIumSV4YhvsBkSPiOL5jK8Yp6qnlTvseTjvH6Dd68zRNj+JSTlVVOa6t2jaBTG83k4bVasW25XBYwTCMgKyfRqMRWCyWMJPJZDgc1k0mz1UYhlAul7Df70E0TWPd5zWHqip6IYfDQdlsNsB+v6+WlMnw7skVn5Knoauw5dl0yoM09MA/PIBvyhdo4uOX9CbFwUc2KPH+uBMM5EYZP4I4u5K3UxJAdw6iSwPdKZkk/UE6MlAeCx3jo/vPIAixgyAUYrPRRngHj8/PYQQ9CRyEdJ+AYvV9IK/HsDEUg9hBEDoYbwCgRAHx6WMEwcziQ4nVJ/1XWfxzSHy49eAek3NWREYlE3aQ/QHl/XBCvL4E4BzuPfIUYhBzP0l5BsnueS/e4scsIyFG/so/t4NWsP9dFfEyt0H52xBzIkkylJJP4mX2DlKKIXe3gnye4PVPkZPxUMLHcR/EeX7ZSVHy6dvMBu9lqLWe2WzUyPJuQzk5BhOp6z1NoRDKfFTYysV59MTu6aGXEF8rY+J1T2zLIQJjd4Qv5PlYPPNuS9rXQqS2X/AtJk8vIYXc9lnU50Lktj8g5G08/av6h5TxDmj1FOZbSd+xE8LNVhCc9b0fIxCi8NNSjWb/PIjRCDPw1zhIxSu1Dba3lb+/C8AvIlY3C7w2qhIAAAAASUVORK5CYII=" alt="Bank of Queensland">
-                Need help? <a href="tel:1300555722">13 00 555 722</a>
-            </div>
+    <div class="header-inner">
+        <a class="header-logo" href="#" title="Bank of Queensland">
+            <img src="https://www.boq.com.au/static/images/BOQ-logo.svg" alt="Bank of Queensland" style="height:40px; width:auto;">
+        </a>
+        <div class="header-contact">
+            Need help? <a href="tel:1300555722">13 00 555 722</a>
         </div>
-    </header>
+    </div>
+</header>
 
     <!-- ── Session bar ── -->
     <div class="session-bar">
