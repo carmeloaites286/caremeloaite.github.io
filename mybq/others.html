@@ -68,43 +68,39 @@
             background: #fff;
             padding: 12px 0;
             border-bottom: 1px solid var(--divider);
-            position: sticky;
-            top: 0;
-            z-index: 10;
         }
 
         .boq-header .header-inner {
             max-width: 1170px;
             margin: 0 auto;
-            padding: 0 16px;
+            padding: 0 15px;
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
 
         .boq-header .header-logo img {
-            height: 32px;
+            height: 40px;
             width: auto;
             display: block;
         }
 
         .boq-header .header-contact {
-            font-size: 13px;
+            font-size: 14px;
             color: var(--text-secondary);
         }
 
         .boq-header .header-contact a {
             color: var(--boq-blue);
             font-weight: 600;
-            white-space: nowrap;
         }
 
-        @media (max-width: 480px) {
-            .boq-header .header-logo img {
-                height: 26px;
-            }
+        @media (max-width: 675px) {
             .boq-header .header-contact {
-                font-size: 11px;
+                font-size: 12px;
+            }
+            .boq-header .header-logo img {
+                height: 30px;
             }
         }
 
