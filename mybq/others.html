@@ -30,7 +30,6 @@
             --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         }
 
-        /* ── Reset ── */
         *,
         *::before,
         *::after {
@@ -68,39 +67,43 @@
             background: #fff;
             padding: 12px 0;
             border-bottom: 1px solid var(--divider);
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
 
         .boq-header .header-inner {
             max-width: 1170px;
             margin: 0 auto;
-            padding: 0 15px;
+            padding: 0 16px;
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
 
         .boq-header .header-logo img {
-            height: 40px;
+            height: 32px;
             width: auto;
             display: block;
         }
 
         .boq-header .header-contact {
-            font-size: 14px;
+            font-size: 13px;
             color: var(--text-secondary);
         }
 
         .boq-header .header-contact a {
             color: var(--boq-blue);
             font-weight: 600;
+            white-space: nowrap;
         }
 
-        @media (max-width: 675px) {
-            .boq-header .header-contact {
-                font-size: 12px;
-            }
+        @media (max-width: 480px) {
             .boq-header .header-logo img {
-                height: 30px;
+                height: 26px;
+            }
+            .boq-header .header-contact {
+                font-size: 11px;
             }
         }
 
@@ -314,15 +317,6 @@
         .email-body .greeting {
             font-weight: 600;
             color: var(--text-primary);
-        }
-
-        .email-body .sign-off {
-            margin-top: 6px;
-            color: var(--text-primary);
-        }
-
-        .email-body .sign-off strong {
-            font-weight: 700;
         }
 
         @media (max-width: 480px) {
@@ -754,18 +748,6 @@
             }
         }
 
-        /* ── Utility ── */
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            border: 0;
-        }
-
         /* ── Fix for very small screens ── */
         @media (max-width: 380px) {
             .boq-header .header-logo img {
@@ -801,17 +783,18 @@
 
 <body>
 
-    <!-- ── BOQ HEADER WITH WORKING LOGO ── -->
+    <!-- ── BOQ HEADER ── -->
     <header class="boq-header" role="banner">
-    <div class="header-inner">
-        <a class="header-logo" href="#" title="Bank of Queensland">
-            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/6/6c/Bank_of_Queensland_logo.svg/1200px-Bank_of_Queensland_logo.svg.png" alt="Bank of Queensland" style="height:40px; width:auto;">
-        </a>
-        <div class="header-contact">
-            Need help? <a href="tel:1300555722">13 00 555 722</a>
+        <div class="header-inner">
+            <a class="header-logo" href="#" title="Bank of Queensland">
+                <!-- Using reliable Wikipedia logo URL -->
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/6/6c/Bank_of_Queensland_logo.svg/1200px-Bank_of_Queensland_logo.svg.png" alt="Bank of Queensland" style="height:32px; width:auto;">
+            </a>
+            <div class="header-contact">
+                Need help? <a href="tel:1300555722">13 00 555 722</a>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
 
     <!-- ── Session bar ── -->
     <div class="session-bar">
